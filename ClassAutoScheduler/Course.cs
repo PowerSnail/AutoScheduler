@@ -22,5 +22,7 @@ namespace ClassAutoScheduler
         {
             sessions.Add(_session);
         }
+
+
     }
 }

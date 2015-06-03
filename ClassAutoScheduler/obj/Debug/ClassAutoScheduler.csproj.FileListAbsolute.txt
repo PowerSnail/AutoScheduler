@@ -1,1 +1,2 @@
 c:\users\wp\documents\visual studio 2013\Projects\ClassAutoScheduler\ClassAutoScheduler\bin\Debug\ClassAutoScheduler.exe.config
+E:\repo\AutoScheduler\ClassAutoScheduler\bin\Debug\ClassAutoScheduler.exe.config
