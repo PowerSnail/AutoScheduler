@@ -9,24 +9,33 @@ namespace ClassAutoScheduler
     class Session
     {
         //Fields
-        timePeriod[] periods;
+        List<timePeriod> periods;
 
-        public Session(timePeriod[] _period)
+        public Session()
         {
-            periods = _period;
+            periods = new List<timePeriod>();
         }
 
-        public Session parse(string _str)
+        public void addTime(timePeriod _time)
         {
-            List<string> tps
-            for (int i = 0; i < _str.Length; i++)
-            {
-                char c = _str[i];
-                if (char.IsLetter(c))
-                {
+            periods.Add(_time);
+        }
 
+        public static Session parse(string _str)
+        {
+            Session ss = new Session();
+            string[] times = _str.Split('|');
+
+            foreach (string s in times)
+            {
+                int d = s.Length - 8;
+                string t = s.Substring(d);
+                for (int i = 0; i < d; i += 2)
+                {
+                    ss.addTime(timePeriod.parse(s.Substring(i, 2) + t));
                 }
             }
+            return ss;
         }
     }
 }
